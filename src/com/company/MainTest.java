@@ -55,7 +55,7 @@ public class MainTest {
         assertEquals(20,max);
     }
     @Test
-    public void main3() {
+    public void main4() {
         int count=6;
         int[] a = {-20, 11, -4,13,-5,-2};
         int sum,max;
