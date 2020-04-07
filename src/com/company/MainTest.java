@@ -20,12 +20,15 @@ public class MainTest {
 
     @Test
     public void main1() {
-        int count=6;
-        int[] a = {-20, 11, -4,13,-5,-2};
+        int count=4;
+        int flge=0;
+        int[] a = {-10, -20, 1,2};
         int sum,max;
         sum=a[0];
         max=sum;
         for(int j=1;j<count;j++){
+            if(a[j]>0)
+                flge=1;
             if(sum>0){
                 sum=sum+a[j];
             }else{
@@ -34,16 +37,21 @@ public class MainTest {
             if(sum>max)
                 max=sum;
         }
-        assertEquals(20,max);
+        if(flge==0)
+            max=0;
+        assertEquals(3,max);
     }
     @Test
     public void main2() {
-        int count=6;
-        int[] a = {-20, 11, -4,13,-5,-2};
+        int count=4;
+        int flge=0;
+        int[] a = {1, 5, 8,9};
         int sum,max;
         sum=a[0];
         max=sum;
         for(int j=1;j<count;j++){
+            if(a[j]>0)
+                flge=1;
             if(sum>0){
                 sum=sum+a[j];
             }else{
@@ -52,16 +60,21 @@ public class MainTest {
             if(sum>max)
                 max=sum;
         }
-        assertEquals(20,max);
+        if(flge==0)
+            max=0;
+        assertEquals(23,max);
     }
     @Test
-    public void main4() {
-        int count=6;
-        int[] a = {-20, 11, -4,13,-5,-2};
+    public void main3() {
+        int count=4;
+        int flge=0;
+        int[] a = {-1, -9, -8,-7};
         int sum,max;
         sum=a[0];
         max=sum;
         for(int j=1;j<count;j++){
+            if(a[j]>0)
+                flge=1;
             if(sum>0){
                 sum=sum+a[j];
             }else{
@@ -70,6 +83,8 @@ public class MainTest {
             if(sum>max)
                 max=sum;
         }
-        assertEquals(20,max);
+        if(flge==0)
+            max=0;
+        assertEquals(0,max);
     }
 }
